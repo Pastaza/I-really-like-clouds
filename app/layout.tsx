@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Fraunces } from "next/font/google";
+import Link from "next/link";
 import "./styles/globals.css";
 import { Nav } from "./components/nav";
 import { SITE_NAME, SITE_TAGLINE, siteUrl } from "./lib/site";
@@ -42,7 +43,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <p>
                 Built for people who stop walking just to look up.
               </p>
-              <p className="text-ink-600">© {new Date().getFullYear()} {SITE_NAME}</p>
+              <div className="flex items-center gap-4 text-ink-600">
+                <Link href="/privacy" className="hover:text-ink-800">
+                  Privacy Policy
+                </Link>
+                <p>© {new Date().getFullYear()} {SITE_NAME}</p>
+              </div>
             </div>
           </div>
         </footer>
