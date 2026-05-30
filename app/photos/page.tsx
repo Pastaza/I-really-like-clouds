@@ -42,11 +42,7 @@ export default async function PhotosPage() {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="max-w-2xl">
             <Pill>Community</Pill>
-            <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 sm:text-4xl">Cloud photo threads</h1>
-            <p className="mt-3 text-sm leading-relaxed text-ink-700">
-              A simple, photographer-friendly place to share cloud shots. We can run this either with GitHub issues ($0) or
-              Supabase (a real backend).
-            </p>
+            <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 sm:text-4xl">Cloud photo thread</h1>
           </div>
           <div className="flex w-full flex-wrap gap-3 sm:w-auto">
             <Button href={shareUrl}>Share a cloud photo</Button>
