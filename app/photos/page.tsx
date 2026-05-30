@@ -41,7 +41,7 @@ export default async function PhotosPage() {
       <Container>
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div className="max-w-2xl">
-            <Pill>Community beta</Pill>
+            <Pill>Community</Pill>
             <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 sm:text-4xl">Cloud photo threads</h1>
             <p className="mt-3 text-sm leading-relaxed text-ink-700">
               A simple, photographer-friendly place to share cloud shots. We can run this either with GitHub issues ($0) or

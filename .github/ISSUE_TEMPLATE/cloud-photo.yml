@@ -35,8 +35,3 @@ body:
       options:
         - label: I took this photo (or I have permission to share it).
           required: true
-
-  - type: markdown
-    attributes:
-      value: |
-        (This is a beta community feed; moderation is light for now.)
