@@ -13,12 +13,25 @@
 html,
 body {
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   @apply bg-sky text-ink-950 antialiased;
 }
 
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+}
+
 a {
   @apply underline-offset-4;
+}
+
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
 }

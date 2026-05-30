@@ -10,7 +10,7 @@ export default function PrivacyPolicyPage() {
     <main className="py-12">
       <Container>
         <Pill>Legal</Pill>
-        <h1 className="mt-4 font-display text-4xl tracking-tight text-ink-950">Privacy Policy</h1>
+        <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 sm:text-4xl">Privacy Policy</h1>
         <p className="mt-3 max-w-3xl text-ink-800">
           Last updated: May 28, 2026. This policy explains how ireallylikeclouds.xyz collects, uses, stores, and
           shares information when you use this site.
