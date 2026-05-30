@@ -159,13 +159,6 @@ export default async function PhotosPage() {
             ))
           )}
         </div>
-
-        <div className="mt-10 text-sm text-ink-700">
-          <p>
-            Want this fully on-site (uploads, profiles, moderation)? That’s on the roadmap — this GitHub-backed approach lets us
-            start immediately with $0 infrastructure.
-          </p>
-        </div>
       </Container>
     </main>
   );
