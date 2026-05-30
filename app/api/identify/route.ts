@@ -14,7 +14,7 @@ const ResultSchema = z.object({
 
 function fallbackResult() {
   return {
-    title: "Sky photo (beta guess)",
+    title: "Sky photo guess",
     confidence: "low" as const,
     summary:
       "AI classification isn’t configured yet on this deployment. You can still use the Cloud Atlas to match patterns — puffy heaps, wispy streaks, smooth lenses, or pouch-like underbellies.",

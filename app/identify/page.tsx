@@ -36,7 +36,7 @@ export default function IdentifyPage() {
   return (
     <main className="py-12">
       <Container>
-        <Pill>Identify (beta)</Pill>
+        <Pill>Identify</Pill>
         <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 sm:text-4xl">Identify a cloud</h1>
         <p className="mt-3 max-w-2xl text-ink-800">
           Upload a sky photo. If AI is configured, you’ll get a richer result. If not, you’ll still get a helpful guess.

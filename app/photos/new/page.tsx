@@ -5,7 +5,7 @@ export default function NewPhotoPage() {
     <main className="py-10">
       <Container>
         <div className="max-w-2xl">
-          <Pill>Community beta</Pill>
+          <Pill>Community</Pill>
           <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 sm:text-4xl">Share a cloud photo</h1>
           <p className="mt-3 text-sm leading-relaxed text-ink-700">
             Upload one cloud photo. Submissions start as <span className="font-semibold">pending</span> until approved.
@@ -51,9 +51,7 @@ export default function NewPhotoPage() {
                 </Button>
               </div>
 
-              <p className="text-xs text-ink-700">
-                Please keep it cloud-only (no faces, people, or license plates). Moderation is light for now.
-              </p>
+              <p className="text-xs text-ink-700">Please keep it cloud-only (no faces, people, or license plates).</p>
             </form>
           </Card>
         </div>
