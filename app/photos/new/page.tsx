@@ -12,7 +12,7 @@ export default function NewPhotoPage() {
           </p>
 
           <Card className="mt-6">
-            <form action="/api/photos/upload" method="post" encType="multipart/form-data" className="grid gap-4">
+            <form action="/api/photos/upload?redirect=thread" method="post" encType="multipart/form-data" className="grid gap-4">
               <label className="grid gap-1 text-sm">
                 <span className="font-semibold text-ink-900">Title</span>
                 <input

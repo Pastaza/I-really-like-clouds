@@ -61,7 +61,12 @@ export async function POST(req: Request) {
       status
     });
 
-    return NextResponse.redirect(new URL("/photos", req.url), { status: 303 });
+    const shouldRedirect = new URL(req.url).searchParams.get("redirect") === "thread";
+    if (shouldRedirect) {
+      return NextResponse.redirect(new URL("/photos", req.url), { status: 303 });
+    }
+
+    return NextResponse.json({ ok: true, id: row.id, status });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Upload failed";
     return NextResponse.json({ ok: false, error: msg }, { status: 500 });
