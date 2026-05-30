@@ -49,7 +49,7 @@ export default async function AtlasEntryPage({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(entry)) }}
         />
         <Pill>Cloud Atlas</Pill>
-        <h1 className="mt-4 font-display text-4xl tracking-tight text-ink-950">{entry.name}</h1>
+        <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 sm:text-4xl">{entry.name}</h1>
         <p className="mt-3 max-w-2xl text-ink-800">{entry.summary}</p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-3">
@@ -80,7 +80,7 @@ export default async function AtlasEntryPage({
         </div>
 
         <div className="mt-10">
-          <a className="text-sm font-semibold text-ink-900 hover:text-ink-700" href="/identify">
+          <a className="touch-target inline-flex items-center text-sm font-semibold text-ink-900 hover:text-ink-700" href="/identify">
             Identify a cloud from a photo →
           </a>
         </div>

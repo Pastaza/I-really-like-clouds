@@ -9,7 +9,7 @@ export default function ForecastIndex() {
   return (
     <main className="py-12">
       <Container>
-        <h1 className="font-display text-4xl tracking-tight text-ink-950">Sky forecast</h1>
+        <h1 className="font-display text-3xl tracking-tight text-ink-950 sm:text-4xl">Sky forecast</h1>
         <p className="mt-3 max-w-2xl text-ink-800">
           A simple “sky moment” score for the next 48 hours. Pick a location.
         </p>
@@ -21,8 +21,8 @@ export default function ForecastIndex() {
               href={`/forecast/${loc.country.toLowerCase()}/${encodeURIComponent(loc.name.toLowerCase().replace(/\s+/g, "-"))}?lat=${loc.lat}&lon=${loc.lon}&tz=${encodeURIComponent(loc.tz)}&name=${encodeURIComponent(loc.name)}`}
             >
               <Card className="transition hover:bg-white">
-                <div className="flex items-center justify-between">
-                  <h2 className="text-lg font-semibold text-ink-950">{loc.name}</h2>
+                <div className="flex items-center justify-between gap-3">
+                  <h2 className="text-lg font-semibold text-ink-950 break-words">{loc.name}</h2>
                   <span className="text-xs text-ink-600">View →</span>
                 </div>
                 <p className="mt-2 text-sm text-ink-700">

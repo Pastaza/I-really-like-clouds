@@ -12,7 +12,7 @@ export default function GuidePage() {
     <main className="py-12">
       <Container>
         <Pill>Guide</Pill>
-        <h1 className="mt-4 font-display text-4xl tracking-tight text-ink-950">
+        <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 sm:text-4xl">
           How to identify clouds (without guessing)
         </h1>
         <p className="mt-3 max-w-3xl text-ink-800">
@@ -93,7 +93,7 @@ export default function GuidePage() {
         </div>
 
         <div className="mt-10">
-          <Link className="text-sm font-semibold text-ink-900 hover:text-ink-700" href="/atlas">
+          <Link className="touch-target inline-flex items-center text-sm font-semibold text-ink-900 hover:text-ink-700" href="/atlas">
             Browse the Cloud Atlas →
           </Link>
         </div>

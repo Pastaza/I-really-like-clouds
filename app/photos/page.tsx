@@ -48,7 +48,7 @@ export default async function PhotosPage() {
               Supabase (a real backend).
             </p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex w-full flex-wrap gap-3 sm:w-auto">
             <Button href={shareUrl}>Share a cloud photo</Button>
             <Button href="/identify" kind="secondary">
               Identify

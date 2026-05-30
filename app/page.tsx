@@ -9,7 +9,7 @@ export default function Home() {
           <div className="py-14 sm:py-20">
             <div className="max-w-2xl">
               <Pill>Beta · built for ireallylikeclouds.xyz</Pill>
-              <h1 className="mt-5 font-display text-4xl leading-[1.05] tracking-tight text-ink-950 sm:text-6xl">
+              <h1 className="mt-5 font-display text-3xl leading-[1.1] tracking-tight text-ink-950 sm:text-6xl">
                 The internet’s nicest way to figure out what you’re seeing in the sky.
               </h1>
               <p className="mt-5 text-lg leading-relaxed text-ink-800">
@@ -49,7 +49,7 @@ export default function Home() {
 
       <section className="pb-12">
         <Container>
-          <div className="flex items-end justify-between gap-6">
+          <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
             <div>
               <h2 className="font-display text-2xl tracking-tight text-ink-950 sm:text-3xl">Featured sky forecasts</h2>
               <p className="mt-2 text-sm text-ink-700">Quick links while we build search + geolocation.</p>

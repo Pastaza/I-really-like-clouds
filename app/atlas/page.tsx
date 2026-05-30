@@ -9,7 +9,7 @@ export default function AtlasIndex() {
   return (
     <main className="py-12">
       <Container>
-        <h1 className="font-display text-4xl tracking-tight text-ink-950">Cloud Atlas</h1>
+        <h1 className="font-display text-3xl tracking-tight text-ink-950 sm:text-4xl">Cloud Atlas</h1>
         <p className="mt-3 max-w-2xl text-ink-800">
           Fast, practical guides for spotting clouds and understanding what they usually mean.
         </p>

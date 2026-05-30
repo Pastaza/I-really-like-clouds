@@ -37,7 +37,7 @@ export default function IdentifyPage() {
     <main className="py-12">
       <Container>
         <Pill>Identify (beta)</Pill>
-        <h1 className="mt-4 font-display text-4xl tracking-tight text-ink-950">Identify a cloud</h1>
+        <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 sm:text-4xl">Identify a cloud</h1>
         <p className="mt-3 max-w-2xl text-ink-800">
           Upload a sky photo. If AI is configured, you’ll get a richer result. If not, you’ll still get a helpful guess.
         </p>
@@ -66,11 +66,11 @@ export default function IdentifyPage() {
               <div className="mt-4 aspect-video w-full rounded-xl bg-white/60 ring-1 ring-ink-900/10" />
             )}
 
-            <div className="mt-4 flex gap-3">
+            <div className="mt-4 flex flex-wrap gap-3">
               <button
                 onClick={onIdentify}
                 disabled={!file || busy}
-                className="inline-flex items-center justify-center rounded-xl bg-ink-950 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-ink-900 disabled:opacity-50"
+                className="touch-target inline-flex items-center justify-center rounded-xl bg-ink-950 px-4 py-2.5 text-sm font-semibold text-white shadow-glow transition hover:bg-ink-900 disabled:opacity-50"
               >
                 {busy ? "Identifying…" : "Identify"}
               </button>
@@ -103,7 +103,7 @@ export default function IdentifyPage() {
 
                 <p className="mt-3 text-sm text-ink-800">{result.summary}</p>
 
-                <div className="mt-5 grid gap-4 sm:grid-cols-3">
+                <div className="mt-5 grid gap-4 md:grid-cols-3">
                   <div>
                     <div className="text-xs font-semibold text-ink-900">Look for</div>
                     <ul className="mt-2 list-disc space-y-1 pl-5 text-xs text-ink-700">

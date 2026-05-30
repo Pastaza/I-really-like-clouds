@@ -43,7 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <p>
                 Built for people who stop walking just to look up.
               </p>
-              <div className="flex items-center gap-4 text-ink-600">
+              <div className="flex flex-wrap items-center gap-4 text-ink-600">
                 <Link href="/privacy" className="hover:text-ink-800">
                   Privacy Policy
                 </Link>

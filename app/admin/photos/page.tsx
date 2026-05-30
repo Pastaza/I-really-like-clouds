@@ -96,7 +96,7 @@ export default function AdminPhotosPage() {
 
   return (
     <main className="mx-auto w-full max-w-6xl px-5 py-10">
-      <h1 className="font-display text-3xl tracking-tight text-ink-950">Admin · Featured photos</h1>
+      <h1 className="font-display text-2xl tracking-tight text-ink-950 sm:text-3xl">Admin · Featured photos</h1>
       <p className="mt-2 text-sm text-ink-700">
         Pick a “photo of the week” / “photo of the month”.
         <br />
@@ -107,25 +107,25 @@ export default function AdminPhotosPage() {
         <div className="text-sm font-semibold text-ink-900">PHOTO_ADMIN_TOKEN</div>
         <div className="flex flex-wrap gap-3">
           <input
-            className="min-w-[280px] flex-1 rounded-xl bg-white px-3 py-2 ring-1 ring-ink-900/10"
+            className="touch-target min-w-[200px] flex-1 rounded-xl bg-white px-3 py-2.5 ring-1 ring-ink-900/10 sm:min-w-[280px]"
             value={token}
             onChange={(e) => setToken(e.target.value)}
             placeholder={savedToken ? "(token saved in this browser)" : "paste token here"}
           />
           <button
-            className="rounded-xl bg-ink-950 px-4 py-2 text-sm font-semibold text-white shadow-glow hover:bg-ink-900"
+            className="touch-target rounded-xl bg-ink-950 px-4 py-2.5 text-sm font-semibold text-white shadow-glow hover:bg-ink-900"
             onClick={saveToken}
           >
             Save
           </button>
           <button
-            className="rounded-xl bg-white/80 px-4 py-2 text-sm font-semibold text-ink-950 ring-1 ring-ink-900/10 hover:bg-white"
+            className="touch-target rounded-xl bg-white/80 px-4 py-2.5 text-sm font-semibold text-ink-950 ring-1 ring-ink-900/10 hover:bg-white"
             onClick={clearToken}
           >
             Clear
           </button>
           <button
-            className="rounded-xl bg-white/80 px-4 py-2 text-sm font-semibold text-ink-950 ring-1 ring-ink-900/10 hover:bg-white"
+            className="touch-target rounded-xl bg-white/80 px-4 py-2.5 text-sm font-semibold text-ink-950 ring-1 ring-ink-900/10 hover:bg-white"
             onClick={load}
           >
             Refresh
@@ -151,19 +151,19 @@ export default function AdminPhotosPage() {
               {p.caption ? <p className="mt-3 text-sm text-ink-700">{p.caption}</p> : null}
               <div className="mt-4 flex flex-wrap gap-2">
                 <button
-                  className="rounded-xl bg-ink-950 px-3 py-2 text-xs font-semibold text-white hover:bg-ink-900"
+                  className="touch-target rounded-xl bg-ink-950 px-3 py-2 text-xs font-semibold text-white hover:bg-ink-900"
                   onClick={() => feature(p.id, "week")}
                 >
                   Set week
                 </button>
                 <button
-                  className="rounded-xl bg-ink-950 px-3 py-2 text-xs font-semibold text-white hover:bg-ink-900"
+                  className="touch-target rounded-xl bg-ink-950 px-3 py-2 text-xs font-semibold text-white hover:bg-ink-900"
                   onClick={() => feature(p.id, "month")}
                 >
                   Set month
                 </button>
                 <button
-                  className="rounded-xl bg-white/80 px-3 py-2 text-xs font-semibold text-ink-950 ring-1 ring-ink-900/10 hover:bg-white"
+                  className="touch-target rounded-xl bg-white/80 px-3 py-2 text-xs font-semibold text-ink-950 ring-1 ring-ink-900/10 hover:bg-white"
                   onClick={() => feature(p.id, null)}
                 >
                   Unfeature

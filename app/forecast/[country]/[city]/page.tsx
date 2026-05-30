@@ -116,7 +116,7 @@ export default async function ForecastCityPage({
     <main className="py-12">
       <Container>
         <Pill>Sky forecast</Pill>
-        <h1 className="mt-4 font-display text-4xl tracking-tight text-ink-950">{name}</h1>
+        <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 sm:text-4xl">{name}</h1>
         <p className="mt-3 max-w-2xl text-ink-800">
           A simple cloud-based score (0–100) for the next ~24 hours. Powered by Open‑Meteo.
         </p>
@@ -126,13 +126,13 @@ export default async function ForecastCityPage({
             <h2 className="font-semibold">Best moment (next 24h)</h2>
             <p className="mt-3 text-3xl font-semibold text-ink-950">{best.score}/100</p>
             <p className="mt-2 text-sm text-ink-700">{best.note}</p>
-            <div className="mt-4 text-xs text-ink-600">
+            <div className="mt-4 text-xs leading-relaxed text-ink-600">
               Clouds: {best.cloudCover}% (low {best.cloudLow} / mid {best.cloudMid} / high {best.cloudHigh}) · Visibility: {best.visKm.toFixed(1)} km
             </div>
           </Card>
 
           <Card className="sm:col-span-2">
-            <div className="flex items-end justify-between gap-4">
+            <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
               <h2 className="font-semibold">Next 24 hours</h2>
               <div className="text-xs text-ink-600">Highlighted: current hour</div>
             </div>

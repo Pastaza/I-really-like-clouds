@@ -19,7 +19,7 @@ export default function NewPhotoPage() {
                   name="title"
                   required
                   defaultValue="Cloud photo"
-                  className="rounded-xl bg-white px-3 py-2 ring-1 ring-ink-900/10"
+                  className="touch-target rounded-xl bg-white px-3 py-2.5 ring-1 ring-ink-900/10"
                 />
               </label>
 
@@ -35,7 +35,13 @@ export default function NewPhotoPage() {
 
               <label className="grid gap-1 text-sm">
                 <span className="font-semibold text-ink-900">Photo</span>
-                <input name="file" type="file" accept="image/*" required className="block text-sm" />
+                <input
+                  name="file"
+                  type="file"
+                  accept="image/*"
+                  required
+                  className="touch-target block w-full rounded-xl bg-white px-3 py-2 text-sm ring-1 ring-ink-900/10 file:mr-3 file:rounded-lg file:border-0 file:bg-ink-950 file:px-3 file:py-2 file:text-sm file:font-medium file:text-white"
+                />
               </label>
 
               <div className="flex flex-wrap gap-3">
