@@ -61,7 +61,7 @@ export async function POST(req: Request) {
       status
     });
 
-    return NextResponse.json({ ok: true, id: row.id, status });
+    return NextResponse.redirect(new URL("/photos", req.url), { status: 303 });
   } catch (e) {
     const msg = e instanceof Error ? e.message : "Upload failed";
     return NextResponse.json({ ok: false, error: msg }, { status: 500 });
