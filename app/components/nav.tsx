@@ -20,7 +20,7 @@ export function Nav() {
       <Container>
         <div className="flex flex-wrap items-center justify-between gap-3 py-3 sm:h-14 sm:py-0">
           <Link href="/" className="touch-target inline-flex items-center font-semibold tracking-tight text-ink-950">
-            ireallylikeclouds
+            I Really Like Clouds
           </Link>
           <button
             type="button"
