@@ -8,7 +8,7 @@ export default function Home() {
         <Container>
           <div className="py-14 sm:py-20">
             <div className="max-w-2xl">
-              <Pill>Built for ireallylikeclouds.xyz</Pill>
+              <Pill>Built for looking up</Pill>
               <h1 className="mt-5 font-display text-3xl leading-[1.1] tracking-tight text-ink-950 sm:text-6xl">
                 The internet’s nicest way to figure out what you’re seeing in the sky.
               </h1>
