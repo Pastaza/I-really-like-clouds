@@ -20,7 +20,7 @@ export function Nav() {
       <Container>
         <div className="flex flex-wrap items-center justify-between gap-3 py-3 sm:h-14 sm:py-0">
           <Link href="/" className="touch-target inline-flex items-center font-semibold tracking-tight text-ink-950">
-            <img src="/Logo.png" alt="Logo" className="h-15 w-auto" />
+            <img src="/Logo.png" alt="Logo" className="h-14.2 w-auto" />
           </Link>
           <button
             type="button"
