@@ -35,7 +35,7 @@ export function ThemeToggle() {
         applyTheme(next);
       }}
     >
-      {theme === "dark" ? "☀︎ Light mode" : "☾ Night mode"}
+      {theme === "dark" ? "☀︎ Day time" : "☾ Night time"}
     </button>
   );
 }
