@@ -1,10 +1,8 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}"
-  ],
+  darkMode: ["class"],
+  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       fontFamily: {
@@ -31,8 +29,8 @@ export default {
         glow: "0 0 0 1px rgba(255,255,255,0.55), 0 30px 120px rgba(46,57,88,0.28)"
       },
       backgroundImage: {
-        sky: "radial-gradient(1200px 700px at 70% 20%, rgba(255,255,255,0.85), rgba(255,255,255,0) 60%), radial-gradient(900px 600px at 10% 0%, rgba(161,214,255,0.55), rgba(161,214,255,0) 60%), linear-gradient(180deg, #f7fbff 0%, #eef5ff 45%, #ffffff 100%)",
-        dusk: "radial-gradient(900px 600px at 80% 30%, rgba(255,214,153,0.55), rgba(255,214,153,0) 55%), radial-gradient(900px 600px at 20% 10%, rgba(201,176,255,0.35), rgba(201,176,255,0) 55%), linear-gradient(180deg, #ffffff 0%, #fff6ef 38%, #ffffff 100%)"
+        sky: "radial-gradient(1200px 700px at 70% 20%, rgba(255,255,255,0.85), rgba(255,255,255,0) 60%), radial-gradient(900px 600px at 10% 0%, rgba(161,214,255,0.55), rgba(161,214,255,0) 60%), linear-gradient(180deg, #f6f7fb 0%, #eef1f8 40%, #d8deee 100%)",
+        dusk: "radial-gradient(900px 600px at 80% 30%, rgba(255,214,153,0.55), rgba(255,214,153,0) 55%), radial-gradient(900px 600px at 20% 10%, rgba(201,176,255,0.35), rgba(201,176,255,0) 55%), linear-gradient(180deg, #f6f7fb 0%, #eef1f8 40%, #d8deee 100%)"
       }
     }
   },
