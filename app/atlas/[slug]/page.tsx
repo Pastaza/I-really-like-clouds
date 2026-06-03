@@ -49,13 +49,13 @@ export default async function AtlasEntryPage({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(entry)) }}
         />
         <Pill>Cloud Atlas</Pill>
-        <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 sm:text-4xl">{entry.name}</h1>
-        <p className="mt-3 max-w-2xl text-ink-800">{entry.summary}</p>
+        <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 dark:text-ink-50 sm:text-4xl">{entry.name}</h1>
+        <p className="mt-3 max-w-2xl text-ink-800 dark:text-ink-200">{entry.summary}</p>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-3">
           <Card>
             <h2 className="font-semibold">How to spot it</h2>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-ink-700">
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-ink-700 dark:text-ink-200">
               {entry.spotting.map((s) => (
                 <li key={s}>{s}</li>
               ))}
@@ -63,7 +63,7 @@ export default async function AtlasEntryPage({
           </Card>
           <Card>
             <h2 className="font-semibold">What it can mean</h2>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-ink-700">
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-ink-700 dark:text-ink-200">
               {entry.meaning.map((s) => (
                 <li key={s}>{s}</li>
               ))}
@@ -71,7 +71,7 @@ export default async function AtlasEntryPage({
           </Card>
           <Card>
             <h2 className="font-semibold">Photography tips</h2>
-            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-ink-700">
+            <ul className="mt-3 list-disc space-y-2 pl-5 text-sm text-ink-700 dark:text-ink-200">
               {entry.photography.map((s) => (
                 <li key={s}>{s}</li>
               ))}
@@ -80,7 +80,7 @@ export default async function AtlasEntryPage({
         </div>
 
         <div className="mt-10">
-          <a className="touch-target inline-flex items-center text-sm font-semibold text-ink-900 hover:text-ink-700" href="/identify">
+          <a className="touch-target inline-flex items-center text-sm font-semibold text-ink-900 hover:text-ink-700 dark:text-ink-200 dark:hover:text-ink-50" href="/identify">
             Identify a cloud from a photo →
           </a>
         </div>

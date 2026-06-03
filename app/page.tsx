@@ -9,10 +9,10 @@ export default function Home() {
           <div className="py-14 sm:py-20">
             <div className="max-w-2xl">
               <Pill>Built for looking up</Pill>
-              <h1 className="mt-5 font-display text-3xl leading-[1.1] tracking-tight text-ink-950 sm:text-6xl">
+              <h1 className="mt-5 font-display text-3xl leading-[1.1] tracking-tight text-ink-950 dark:text-ink-50 sm:text-6xl">
                 The internet’s nicest way to figure out what you’re seeing in the sky.
               </h1>
-              <p className="mt-5 text-lg leading-relaxed text-ink-800">
+              <p className="mt-5 text-lg leading-relaxed text-ink-800 dark:text-ink-200">
                 Identify clouds from a photo, learn what they mean, and get a simple forecast for the next beautiful sky moment.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
@@ -32,15 +32,15 @@ export default function Home() {
             <div className="mt-10 grid gap-4 sm:mt-14 sm:grid-cols-3">
               <Card>
                 <h3 className="font-semibold">Cloud Atlas</h3>
-                <p className="mt-2 text-sm text-ink-700">Fast, clear guides you can actually use outside.</p>
+                <p className="mt-2 text-sm text-ink-700 dark:text-ink-200">Fast, clear guides you can actually use outside.</p>
               </Card>
               <Card>
                 <h3 className="font-semibold">Sky Moment Score</h3>
-                <p className="mt-2 text-sm text-ink-700">A simple heuristic: you want texture — not a blank blue sheet, not a gray lid.</p>
+                <p className="mt-2 text-sm text-ink-700 dark:text-ink-200">A simple heuristic: you want texture — not a blank blue sheet, not a gray lid.</p>
               </Card>
               <Card>
                 <h3 className="font-semibold">Shareable results</h3>
-                <p className="mt-2 text-sm text-ink-700">Permalinks + beautiful previews (OG image) for easy posting.</p>
+                <p className="mt-2 text-sm text-ink-700 dark:text-ink-200">Permalinks + beautiful previews (OG image) for easy posting.</p>
               </Card>
             </div>
           </div>
@@ -51,8 +51,8 @@ export default function Home() {
         <Container>
           <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-end sm:justify-between sm:gap-6">
             <div>
-              <h2 className="font-display text-2xl tracking-tight text-ink-950 sm:text-3xl">Featured sky forecasts</h2>
-              <p className="mt-2 text-sm text-ink-700">Quick links while we build search + geolocation.</p>
+              <h2 className="font-display text-2xl tracking-tight text-ink-950 dark:text-ink-50 sm:text-3xl">Featured sky forecasts</h2>
+              <p className="mt-2 text-sm text-ink-700 dark:text-ink-200">Quick links while we build search + geolocation.</p>
             </div>
             <Button href="/forecast" kind="secondary">All locations</Button>
           </div>
@@ -62,10 +62,10 @@ export default function Home() {
               <a
                 key={`${loc.country}-${loc.name}`}
                 href={`/forecast/${loc.country.toLowerCase()}/${encodeURIComponent(loc.name.toLowerCase().replace(/\s+/g, "-"))}?lat=${loc.lat}&lon=${loc.lon}&tz=${encodeURIComponent(loc.tz)}&name=${encodeURIComponent(loc.name)}`}
-                className="group rounded-2xl bg-white/70 p-5 ring-1 ring-ink-900/10 backdrop-blur transition hover:bg-white"
+                className="group rounded-2xl bg-white/70 p-5 ring-1 ring-ink-900/10 backdrop-blur transition hover:bg-white dark:bg-white/10 dark:ring-white/10 dark:hover:bg-white/15"
               >
-                <div className="text-sm font-semibold text-ink-950 group-hover:text-ink-800">{loc.name}</div>
-                <div className="mt-1 text-xs text-ink-600">{loc.country} · {loc.tz}</div>
+                <div className="text-sm font-semibold text-ink-950 group-hover:text-ink-800 dark:text-ink-50 dark:group-hover:text-ink-100">{loc.name}</div>
+                <div className="mt-1 text-xs text-ink-600 dark:text-ink-300">{loc.country} · {loc.tz}</div>
               </a>
             ))}
           </div>
