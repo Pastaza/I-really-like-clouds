@@ -27,14 +27,15 @@ export function ThemeToggle() {
   return (
     <button
       type="button"
-      className="touch-target inline-flex items-center justify-center rounded-xl bg-white/80 px-3 py-2 text-xs font-semibold text-ink-950 ring-1 ring-ink-900/10 hover:bg-white dark:bg-white/10 dark:text-ink-50 dark:ring-white/10"
+      aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+      className="touch-target inline-flex items-center justify-center rounded-xl bg-white/80 px-3 py-2 text-xs font-semibold text-ink-950 ring-1 ring-ink-900/10 transition hover:bg-white dark:bg-white/10 dark:text-ink-50 dark:ring-white/10 dark:hover:bg-white/15"
       onClick={() => {
         const next: Theme = theme === "dark" ? "light" : "dark";
         setTheme(next);
         applyTheme(next);
       }}
     >
-      {theme === "dark" ? "Light mode" : "Dark mode"}
+      {theme === "dark" ? "☀︎ Light mode" : "☾ Night mode"}
     </button>
   );
 }

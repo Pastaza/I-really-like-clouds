@@ -96,81 +96,81 @@ export default function AdminPhotosPage() {
 
   return (
     <main className="mx-auto w-full max-w-6xl px-5 py-10">
-      <h1 className="font-display text-2xl tracking-tight text-ink-950 sm:text-3xl">Admin · Featured photos</h1>
-      <p className="mt-2 text-sm text-ink-700">
+      <h1 className="font-display text-2xl tracking-tight text-ink-950 dark:text-ink-50 sm:text-3xl">Admin · Featured photos</h1>
+      <p className="mt-2 text-sm text-ink-700 dark:text-ink-200">
         Pick a “photo of the week” / “photo of the month”.
         <br />
         Security note: this page stores the admin token in your browser localStorage.
       </p>
 
-      <div className="mt-6 grid gap-3 rounded-2xl bg-white/75 p-5 shadow-cloud ring-1 ring-ink-900/10 backdrop-blur">
-        <div className="text-sm font-semibold text-ink-900">PHOTO_ADMIN_TOKEN</div>
+      <div className="mt-6 grid gap-3 rounded-2xl bg-white/75 p-5 shadow-cloud ring-1 ring-ink-900/10 backdrop-blur dark:bg-white/10 dark:ring-white/10">
+        <div className="text-sm font-semibold text-ink-900 dark:text-ink-100">PHOTO_ADMIN_TOKEN</div>
         <div className="flex flex-wrap gap-3">
           <input
-            className="touch-target min-w-[200px] flex-1 rounded-xl bg-white px-3 py-2.5 ring-1 ring-ink-900/10 sm:min-w-[280px]"
+            className="touch-target min-w-[200px] flex-1 rounded-xl bg-white px-3 py-2.5 ring-1 ring-ink-900/10 sm:min-w-[280px] dark:bg-white/10 dark:text-ink-50 dark:ring-white/10"
             value={token}
             onChange={(e) => setToken(e.target.value)}
             placeholder={savedToken ? "(token saved in this browser)" : "paste token here"}
           />
           <button
-            className="touch-target rounded-xl bg-ink-950 px-4 py-2.5 text-sm font-semibold text-white shadow-glow hover:bg-ink-900"
+            className="touch-target rounded-xl bg-ink-950 px-4 py-2.5 text-sm font-semibold text-white shadow-glow hover:bg-ink-900 dark:bg-ink-50 dark:text-ink-950 dark:hover:bg-white"
             onClick={saveToken}
           >
             Save
           </button>
           <button
-            className="touch-target rounded-xl bg-white/80 px-4 py-2.5 text-sm font-semibold text-ink-950 ring-1 ring-ink-900/10 hover:bg-white"
+            className="touch-target rounded-xl bg-white/80 px-4 py-2.5 text-sm font-semibold text-ink-950 ring-1 ring-ink-900/10 hover:bg-white dark:bg-white/10 dark:text-ink-50 dark:ring-white/10 dark:hover:bg-white/15"
             onClick={clearToken}
           >
             Clear
           </button>
           <button
-            className="touch-target rounded-xl bg-white/80 px-4 py-2.5 text-sm font-semibold text-ink-950 ring-1 ring-ink-900/10 hover:bg-white"
+            className="touch-target rounded-xl bg-white/80 px-4 py-2.5 text-sm font-semibold text-ink-950 ring-1 ring-ink-900/10 hover:bg-white dark:bg-white/10 dark:text-ink-50 dark:ring-white/10 dark:hover:bg-white/15"
             onClick={load}
           >
             Refresh
           </button>
         </div>
-        {msg ? <div className="text-sm text-ink-800">{msg}</div> : null}
+        {msg ? <div className="text-sm text-ink-800 dark:text-ink-200">{msg}</div> : null}
       </div>
 
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {loading ? <div className="text-sm text-ink-700">Loading…</div> : null}
+        {loading ? <div className="text-sm text-ink-700 dark:text-ink-200">Loading…</div> : null}
         {photos.map((p) => (
-          <div key={p.id} className="rounded-2xl bg-white/75 p-5 shadow-cloud ring-1 ring-ink-900/10 backdrop-blur">
+          <div key={p.id} className="rounded-2xl bg-white/75 p-5 shadow-cloud ring-1 ring-ink-900/10 backdrop-blur dark:bg-white/10 dark:ring-white/10">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={p.image_url}
               alt={p.title}
-              className="h-48 w-full rounded-xl object-cover ring-1 ring-ink-900/10"
+              className="h-48 w-full rounded-xl object-cover ring-1 ring-ink-900/10 dark:ring-white/10"
               loading="lazy"
             />
             <div className="mt-4">
-              <div className="font-semibold text-ink-950">{p.title}</div>
-              <div className="mt-1 text-xs text-ink-600">{formatDate(p.created_at)}</div>
-              {p.caption ? <p className="mt-3 text-sm text-ink-700">{p.caption}</p> : null}
+              <div className="font-semibold text-ink-950 dark:text-ink-50">{p.title}</div>
+              <div className="mt-1 text-xs text-ink-600 dark:text-ink-300">{formatDate(p.created_at)}</div>
+              {p.caption ? <p className="mt-3 text-sm text-ink-700 dark:text-ink-200">{p.caption}</p> : null}
               <div className="mt-4 flex flex-wrap gap-2">
                 <button
-                  className="touch-target rounded-xl bg-ink-950 px-3 py-2 text-xs font-semibold text-white hover:bg-ink-900"
+                  className="touch-target rounded-xl bg-ink-950 px-3 py-2 text-xs font-semibold text-white hover:bg-ink-900 dark:bg-ink-50 dark:text-ink-950 dark:hover:bg-white"
                   onClick={() => feature(p.id, "week")}
                 >
                   Set week
                 </button>
                 <button
-                  className="touch-target rounded-xl bg-ink-950 px-3 py-2 text-xs font-semibold text-white hover:bg-ink-900"
+                  className="touch-target rounded-xl bg-ink-950 px-3 py-2 text-xs font-semibold text-white hover:bg-ink-900 dark:bg-ink-50 dark:text-ink-950 dark:hover:bg-white"
                   onClick={() => feature(p.id, "month")}
                 >
                   Set month
                 </button>
                 <button
-                  className="touch-target rounded-xl bg-white/80 px-3 py-2 text-xs font-semibold text-ink-950 ring-1 ring-ink-900/10 hover:bg-white"
+                  className="touch-target rounded-xl bg-white/80 px-3 py-2 text-xs font-semibold text-ink-950 ring-1 ring-ink-900/10 hover:bg-white dark:bg-white/10 dark:text-ink-50 dark:ring-white/10 dark:hover:bg-white/15"
                   onClick={() => feature(p.id, null)}
                 >
                   Unfeature
                 </button>
               </div>
               {p.featured_scope ? (
-                <div className="mt-3 text-xs font-semibold text-ink-700">Featured: {p.featured_scope}</div>
+                <div className="mt-3 text-xs font-semibold text-ink-700 dark:text-ink-200">Featured: {p.featured_scope}</div>
               ) : null}
             </div>
           </div>

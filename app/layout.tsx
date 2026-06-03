@@ -37,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Nav />
         {children}
-        <footer className="mt-20 border-t border-ink-900/10 bg-white/50 py-10 dark:border-white/10 dark:bg-white/5">
+        <footer className="mt-20 border-t border-ink-900/10 bg-white/50 py-10 dark:border-white/10 dark:bg-[#080f20]/55">
           <div className="mx-auto w-full max-w-6xl px-5 text-sm text-ink-700 dark:text-ink-200">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <p>Built for people who stop walking just to look up.</p>

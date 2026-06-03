@@ -6,41 +6,41 @@ export default function NewPhotoPage() {
       <Container>
         <div className="max-w-2xl">
           <Pill>Community</Pill>
-          <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 sm:text-4xl">Share a cloud photo</h1>
-          <p className="mt-3 text-sm leading-relaxed text-ink-700">
+          <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 dark:text-ink-50 sm:text-4xl">Share a cloud photo</h1>
+          <p className="mt-3 text-sm leading-relaxed text-ink-700 dark:text-ink-200">
             Upload one cloud photo. Submissions start as <span className="font-semibold">pending</span> until approved.
           </p>
 
           <Card className="mt-6">
             <form action="/api/photos/upload?redirect=thread" method="post" encType="multipart/form-data" className="grid gap-4">
               <label className="grid gap-1 text-sm">
-                <span className="font-semibold text-ink-900">Title</span>
+                <span className="font-semibold text-ink-900 dark:text-ink-100">Title</span>
                 <input
                   name="title"
                   required
                   defaultValue="Cloud photo"
-                  className="touch-target rounded-xl bg-white px-3 py-2.5 ring-1 ring-ink-900/10"
+                  className="touch-target rounded-xl bg-white px-3 py-2.5 ring-1 ring-ink-900/10 dark:bg-white/10 dark:text-ink-50 dark:ring-white/10"
                 />
               </label>
 
               <label className="grid gap-1 text-sm">
-                <span className="font-semibold text-ink-900">Caption (optional)</span>
+                <span className="font-semibold text-ink-900 dark:text-ink-100">Caption (optional)</span>
                 <textarea
                   name="caption"
                   rows={4}
                   placeholder="Location, date/time, cloud guess, camera/lens…"
-                  className="rounded-xl bg-white px-3 py-2 ring-1 ring-ink-900/10"
+                  className="rounded-xl bg-white px-3 py-2 ring-1 ring-ink-900/10 dark:bg-white/10 dark:text-ink-50 dark:ring-white/10"
                 />
               </label>
 
               <label className="grid gap-1 text-sm">
-                <span className="font-semibold text-ink-900">Photo</span>
+                <span className="font-semibold text-ink-900 dark:text-ink-100">Photo</span>
                 <input
                   name="file"
                   type="file"
                   accept="image/*"
                   required
-                  className="touch-target block w-full rounded-xl bg-white px-3 py-2 text-sm ring-1 ring-ink-900/10 file:mr-3 file:rounded-lg file:border-0 file:bg-ink-950 file:px-3 file:py-2 file:text-sm file:font-medium file:text-white"
+                  className="touch-target block w-full rounded-xl bg-white px-3 py-2 text-sm ring-1 ring-ink-900/10 file:mr-3 file:rounded-lg file:border-0 file:bg-ink-950 file:px-3 file:py-2 file:text-sm file:font-medium file:text-white dark:bg-white/10 dark:text-ink-50 dark:ring-white/10 dark:file:bg-ink-50 dark:file:text-ink-950"
                 />
               </label>
 
@@ -51,7 +51,7 @@ export default function NewPhotoPage() {
                 </Button>
               </div>
 
-              <p className="text-xs text-ink-700">Please keep it cloud-only (no faces, people, or license plates).</p>
+              <p className="text-xs text-ink-700 dark:text-ink-200">Please keep it cloud-only (no faces, people, or license plates).</p>
             </form>
           </Card>
         </div>

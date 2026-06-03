@@ -17,7 +17,7 @@ export function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-ink-900/10 bg-white/60 backdrop-blur dark:border-white/10 dark:bg-ink-950/40">
+    <header className="sticky top-0 z-40 border-b border-ink-900/10 bg-white/60 backdrop-blur dark:border-white/10 dark:bg-[#060a15]/70">
       <Container>
         <div className="flex flex-wrap items-center justify-between gap-3 py-3 sm:h-14 sm:py-0">
           <Link

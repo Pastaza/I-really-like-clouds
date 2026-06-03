@@ -21,7 +21,24 @@ body {
 }
 
 body {
-  @apply bg-sky text-ink-950 antialiased dark:bg-ink-950 dark:text-ink-50;
+  @apply bg-sky text-ink-950 antialiased dark:text-ink-50;
+  background-attachment: fixed;
+}
+
+html.dark body {
+  background-color: #070b16;
+  background-image:
+    radial-gradient(1px 1px at 10% 15%, rgba(246, 247, 251, 0.44) 98%, transparent),
+    radial-gradient(1px 1px at 22% 78%, rgba(246, 247, 251, 0.3) 98%, transparent),
+    radial-gradient(1px 1px at 34% 40%, rgba(246, 247, 251, 0.34) 98%, transparent),
+    radial-gradient(1px 1px at 52% 22%, rgba(246, 247, 251, 0.36) 98%, transparent),
+    radial-gradient(1px 1px at 64% 64%, rgba(246, 247, 251, 0.32) 98%, transparent),
+    radial-gradient(1px 1px at 78% 12%, rgba(246, 247, 251, 0.38) 98%, transparent),
+    radial-gradient(1px 1px at 86% 54%, rgba(246, 247, 251, 0.34) 98%, transparent),
+    radial-gradient(1px 1px at 94% 32%, rgba(246, 247, 251, 0.3) 98%, transparent),
+    radial-gradient(1100px 700px at 82% -8%, rgba(132, 150, 197, 0.26), rgba(132, 150, 197, 0) 60%),
+    radial-gradient(900px 600px at 15% 0%, rgba(93, 114, 173, 0.24), rgba(93, 114, 173, 0) 62%),
+    linear-gradient(180deg, #060910 0%, #0b1120 44%, #141b34 100%);
 }
 
 img,

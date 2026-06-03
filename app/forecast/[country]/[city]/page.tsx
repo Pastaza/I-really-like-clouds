@@ -54,7 +54,7 @@ export default async function ForecastCityPage({
         <Container>
           <Card>
             <h1 className="text-lg font-semibold">Missing coordinates</h1>
-            <p className="mt-2 text-sm text-ink-700">
+            <p className="mt-2 text-sm text-ink-700 dark:text-ink-200">
               This page needs <code>lat</code> and <code>lon</code> query params.
             </p>
           </Card>
@@ -116,17 +116,17 @@ export default async function ForecastCityPage({
     <main className="py-12">
       <Container>
         <Pill>Sky forecast</Pill>
-        <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 sm:text-4xl">{name}</h1>
-        <p className="mt-3 max-w-2xl text-ink-800">
+        <h1 className="mt-4 font-display text-3xl tracking-tight text-ink-950 dark:text-ink-50 sm:text-4xl">{name}</h1>
+        <p className="mt-3 max-w-2xl text-ink-800 dark:text-ink-200">
           A simple cloud-based score (0–100) for the next ~24 hours. Powered by Open‑Meteo.
         </p>
 
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
           <Card className="sm:col-span-1">
             <h2 className="font-semibold">Best moment (next 24h)</h2>
-            <p className="mt-3 text-3xl font-semibold text-ink-950">{best.score}/100</p>
-            <p className="mt-2 text-sm text-ink-700">{best.note}</p>
-            <div className="mt-4 text-xs leading-relaxed text-ink-600">
+            <p className="mt-3 text-3xl font-semibold text-ink-950 dark:text-ink-50">{best.score}/100</p>
+            <p className="mt-2 text-sm text-ink-700 dark:text-ink-200">{best.note}</p>
+            <div className="mt-4 text-xs leading-relaxed text-ink-600 dark:text-ink-300">
               Clouds: {best.cloudCover}% (low {best.cloudLow} / mid {best.cloudMid} / high {best.cloudHigh}) · Visibility: {best.visKm.toFixed(1)} km
             </div>
           </Card>
@@ -134,33 +134,33 @@ export default async function ForecastCityPage({
           <Card className="sm:col-span-2">
             <div className="flex flex-col items-start gap-2 sm:flex-row sm:items-end sm:justify-between sm:gap-4">
               <h2 className="font-semibold">Next 24 hours</h2>
-              <div className="text-xs text-ink-600">Highlighted: current hour</div>
+              <div className="text-xs text-ink-600 dark:text-ink-300">Highlighted: current hour</div>
             </div>
 
             <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-6">
               {moments.map((m) => {
                 const cls = m.isNow
-                  ? "rounded-xl bg-ink-950/5 p-3 ring-2 ring-ink-950/30"
+                  ? "rounded-xl bg-ink-950/5 p-3 ring-2 ring-ink-950/30 dark:bg-white/10 dark:ring-white/20"
                   : m.isPast
-                    ? "rounded-xl bg-white/60 p-3 ring-1 ring-ink-900/10 opacity-70"
-                    : "rounded-xl bg-white/70 p-3 ring-1 ring-ink-900/10";
+                    ? "rounded-xl bg-white/60 p-3 ring-1 ring-ink-900/10 opacity-70 dark:bg-white/5 dark:ring-white/10"
+                    : "rounded-xl bg-white/70 p-3 ring-1 ring-ink-900/10 dark:bg-white/10 dark:ring-white/10";
 
                 return (
                   <div key={m.time} className={cls}>
                     <div className="flex items-center justify-between">
-                      <div className="text-xs text-ink-600">{String(m.hour).padStart(2, "0")}:00</div>
-                      {m.isNow ? <span className="text-[11px] font-semibold text-ink-900">Now</span> : null}
+                      <div className="text-xs text-ink-600 dark:text-ink-300">{String(m.hour).padStart(2, "0")}:00</div>
+                      {m.isNow ? <span className="text-[11px] font-semibold text-ink-900 dark:text-ink-100">Now</span> : null}
                     </div>
-                    <div className="mt-1 text-lg font-semibold text-ink-950">{m.score}</div>
-                    <div className="mt-1 text-xs text-ink-600">{m.cloudCover}% clouds</div>
-                    <div className="mt-1 text-[11px] text-ink-600">
+                    <div className="mt-1 text-lg font-semibold text-ink-950 dark:text-ink-50">{m.score}</div>
+                    <div className="mt-1 text-xs text-ink-600 dark:text-ink-300">{m.cloudCover}% clouds</div>
+                    <div className="mt-1 text-[11px] text-ink-600 dark:text-ink-300">
                       {m.precipProb}% rain · {Math.round(m.windKph)} kph
                     </div>
                   </div>
                 );
               })}
             </div>
-            <p className="mt-4 text-xs text-ink-600">
+            <p className="mt-4 text-xs text-ink-600 dark:text-ink-300">
               This is v1: it’s intentionally simple. Later we’ll add horizon breaks, precipitation, wind shear, and camera-based validation.
             </p>
           </Card>
