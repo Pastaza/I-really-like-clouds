@@ -37,17 +37,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Nav />
         {children}
-        <footer className="mt-20 border-t border-ink-900/10 bg-white/50 py-10">
-          <div className="mx-auto w-full max-w-6xl px-5 text-sm text-ink-700">
+        <footer className="mt-20 border-t border-ink-900/10 bg-white/50 py-10 dark:border-white/10 dark:bg-white/5">
+          <div className="mx-auto w-full max-w-6xl px-5 text-sm text-ink-700 dark:text-ink-200">
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-              <p>
-                Built for people who stop walking just to look up.
-              </p>
-              <div className="flex flex-wrap items-center gap-4 text-ink-600">
-                <Link href="/privacy" className="hover:text-ink-800">
+              <p>Built for people who stop walking just to look up.</p>
+              <div className="flex flex-wrap items-center gap-4 text-ink-600 dark:text-ink-300">
+                <Link href="/privacy" className="hover:text-ink-800 dark:hover:text-ink-50">
                   Privacy Policy
                 </Link>
-                <p>© {new Date().getFullYear()} {SITE_NAME}</p>
+                <p>
+                  © {new Date().getFullYear()} {SITE_NAME}
+                </p>
               </div>
             </div>
           </div>
