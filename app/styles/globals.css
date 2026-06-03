@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: light dark;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 ::selection {
@@ -17,7 +21,7 @@ body {
 }
 
 body {
-  @apply bg-sky text-ink-950 antialiased;
+  @apply bg-sky text-ink-950 antialiased dark:bg-ink-950 dark:text-ink-50;
 }
 
 img,
